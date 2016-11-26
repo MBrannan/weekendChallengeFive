@@ -1,0 +1,25 @@
+{
+  "name": "weekendchallengefive",
+  "version": "1.0.0",
+  "description": "full stack calculating experience",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "echo \"ErrorL no test specified\" && exit 1"
+  },
+  "author": "mike b",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "pg": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MBrannan/weekendChallengeFive.git"
+  }
+}
