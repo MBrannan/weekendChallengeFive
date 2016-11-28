@@ -1,0 +1,45 @@
+<form class="col-md-12">
+  <div class="form-group col-md-6">
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" class="form-control" ng-model="newEmployee.first_name" placeholder="First Name"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" class="form-control" ng-model="newEmployee.last_name" placeholder="Last Name"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="idNumber">ID Number</label>
+    <input type="text" name="idNumber" class="form-control" ng-model="newEmployee.idNumber" placeholder="ID Number"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="title">Title</label>
+    <input type="text" name="title" class="form-control" ng-model="newEmployee.title" placeholder="Title"/>
+  </div>
+  <div class="form-group col-md-6">
+  <label for="salary">Salary</label>
+  <input type="text" name="salary" class="form-control" ng-model="newEmployee.salary" placeholder="Salary"/>
+</div>
+  <button type="submit" name="submit" ng-click="employees.addEmployee(newEmployee)">Submit</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>ID Number</th>
+      <th>Title</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="employee" ng-repeat="employee in employees.employees">
+      <td><input type="text" name="first_name" ng-model="employee.first_name" class="form-control col-md-1"></td>
+      <td><input type="text" name="last_name" ng-model="employee.last_name" class="form-control col-md-1"></td>
+      <td><input type="number" name="idNumber" ng-model="employee.idnumber" class="form-control col-md-1"></td>
+      <td><input type="text" name="title" ng-model="employee.title" class="form-control col-md-1"></td>
+      <td><input type="number" name="salary" ng-model="employee.salary" class="form-control col-md-1"></td>
+      <td><button type="delete" name="delete" ng-click="employees.deleteEmployee(employee)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
